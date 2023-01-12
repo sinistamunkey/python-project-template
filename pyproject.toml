@@ -4,6 +4,7 @@ line-length = 88
 [tool.isort]
 profile = "black"
 skip_glob = ".venv"
+known_first_party = ["project", "tests"]
 
 [tool.mypy]
 exclude = ".venv/"
@@ -17,14 +18,16 @@ no_implicit_optional = true
 warn_redundant_casts = true
 warn_return_any = true
 
+[tool.coverage.report]
+show_missing = true
+
 [tool.poetry]
-name = "<project-name>"
+name = "project"
 version = "0.1.0"
-description = "<project-description>"
+description = ""
 authors = ["Gary Prescott <gary@madplum.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "<project_name>"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -37,6 +40,9 @@ mypy = "^0.991"
 pytest-cov = "^4.0.0"
 flake8-isort = "^6.0.0"
 isort = "^5.11.4"
+jedi = "^0.18.2"
+autopep8 = "^2.0.2"
+yapf = "^0.33.0"
 
 [build-system]
 requires = ["poetry-core"]

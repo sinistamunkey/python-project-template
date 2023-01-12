@@ -9,9 +9,9 @@ format:
 lint:
 	@echo "Linting"
 	flake8 .
-	mypy <project-name>
+	mypy .
 	black --check --diff .
 
 test:
 	@echo "Testing"
-	pytest -x --cov=core --cov=<project-name>
+	pytest -x --cov=core --cov=project
