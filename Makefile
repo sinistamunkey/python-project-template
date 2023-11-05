@@ -14,4 +14,4 @@ lint:
 
 test:
 	@echo "Testing"
-	pytest -x --cov=core --cov=project
+	pytest -x --cov=project tests
