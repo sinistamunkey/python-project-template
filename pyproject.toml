@@ -41,7 +41,7 @@ pytest-cov = "^4.1.0"
 flake8-isort = "^6.1.1"
 isort = "^5.13.2"
 jedi = "^0.19.1"
-autopep8 = "^2.0.4"
+autopep8 = "^2.1.0"
 yapf = "^0.40.2"
 
 [build-system]
