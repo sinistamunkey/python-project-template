@@ -3,14 +3,11 @@ all: lint test
 
 format:
 	@echo "Formatting"
-	isort --profile black .
-	black .
+	ruff format .
 
 lint:
 	@echo "Linting"
-	flake8 .
-	mypy .
-	black --check --diff .
+	ruff check .
 
 test:
 	@echo "Testing"
