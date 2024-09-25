@@ -1,10 +1,23 @@
-[tool.black]
+[tool.ruff]
 line-length = 88
+exclude = [
+    ".git",
+    ".venv"
+]
 
-[tool.isort]
-profile = "black"
-skip_glob = ".venv"
-known_first_party = ["project", "tests"]
+[tool.ruff.lint]
+select = [
+    "I001",
+    "I002",
+    "F",
+    "E",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "project",
+    "tests",
+]
 
 [tool.mypy]
 exclude = ".venv/"
@@ -30,19 +43,15 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
-black = "^24.1.1"
-flake8 = "^7.0.0"
 mypy = "^1.8"
 pytest-cov = "^4.1.0"
-flake8-isort = "^6.1.1"
-isort = "^5.13.2"
-jedi = "^0.19.1"
-autopep8 = "^2.0.4"
 yapf = "^0.40.2"
+packaging = "^24.1"
+ruff = "^0.6.7"
 
 [build-system]
 requires = ["poetry-core"]
