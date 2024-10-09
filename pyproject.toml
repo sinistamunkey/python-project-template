@@ -1,17 +1,29 @@
 [tool.ruff]
+preview = true
 line-length = 88
 exclude = [
     ".git",
     ".venv"
 ]
+target-version = "py312"
 
 [tool.ruff.lint]
 select = [
-    "I001",
-    "I002",
+    "I",
     "F",
     "E",
+    "W",
+    "Q",
+    "UP",
+    "FAST",
+    "LOG",
 ]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
 [tool.ruff.lint.isort]
 known-first-party = [
@@ -51,7 +63,7 @@ mypy = "^1.8"
 pytest-cov = "^5.0.0"
 yapf = "^0.40.2"
 packaging = "^24.1"
-ruff = "^0.6.7"
+ruff = "^0.6.9"
 
 [build-system]
 requires = ["poetry-core"]
