@@ -11,4 +11,8 @@ lint:
 
 test:
 	@echo "Testing"
+	pytest -x tests
+
+test-cov:
+	@echo "Testing with coverage"
 	pytest -x --cov=project tests
